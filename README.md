@@ -23,6 +23,7 @@ O principal objetivo do projeto é integrar uma API de notícias e atualizaçõe
 
 ## Roadmap
 - [x] Criar estrutura inicial da página.
+- [x] Inserir História e Títulos do clube.
 - [ ] Integrar API de notícias e atualizações sobre o clube.
 - [ ] Adicionar seção para tabela de classificação e próximos jogos.
 

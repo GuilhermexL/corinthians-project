@@ -8,6 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  color: #fff;
   background-image: url("/images/sscp-bk.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,18 +40,55 @@ nav ul {
 }
 
 nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: #fff;
   font-size: 20px;
   text-decoration: none;
+  margin: 0 15px;
   transition: color 0.3s;
 }
 
 nav ul li a:hover {
   color: #e4405f;
+}
+
+a:hover {
+  color: #e4405f;
+}
+
+/* Section */
+
+.about {
+  font-size: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.news h2 {
+  font-size: 35px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.cast h2 {
+  font-size: 35px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.story h2 {
+  font-size: 35px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.titles h2 {
+  font-size: 35px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 /* Footer */
@@ -61,8 +99,7 @@ footer {
 }
 
 p {
-  color: #fff;
-  padding: 15px;
+  padding: 20px;
 }
 
 .icons {
@@ -88,7 +125,12 @@ p {
 }
 
 .icons .icon:hover {
-  color: #fff; /* Altera a cor do ícone ao passar o mouse */
+  color: #fff; /* Título do Ícone */
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Tooltip */
@@ -118,12 +160,19 @@ p {
 
 .icons .icon:hover .tooltip {
   opacity: 1;
-  top: -60px;
+  top: -40px;
 }
 
-/* Ícones específicos com cor branca */
+.iconCentralizado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cor de fundo do ícone */
+
 .icons .facebook:hover {
-  background: #1877f2; /* Cor de fundo do ícone ao passar o mouse */
+  background: #1877f2;
 }
 
 .icons .instagram:hover {
@@ -137,3 +186,9 @@ p {
 .icons .x:hover {
   background: #000;
 }
+
+.icons .youtube:hover {
+  background: #ff0000;
+}
+
+/* -------------------- */
