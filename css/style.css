@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 
 * {
   padding: 0;
@@ -7,13 +7,17 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Source Code Pro", serif;
   color: #fff;
   background-image: url("/images/sscp-bk.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+}
+
+img {
+  max-width: 100%;
 }
 
 /* Header */
@@ -54,10 +58,11 @@ a:hover {
   color: #e4405f;
 }
 
-/* Section */
+/* Main */
 
 .about {
-  font-size: 20px;
+  font-family: "Bebas Neue", serif;
+  font-size: 45px;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -77,12 +82,103 @@ a:hover {
   justify-content: center;
 }
 
+/* Main - História */
+
 .story h2 {
   font-size: 35px;
   padding: 20px;
   display: flex;
   justify-content: center;
 }
+
+.timeline {
+  text-align: center;
+}
+
+.timeline .days {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.timeline .days .day {
+  width: 100%;
+  float: left;
+}
+.timeline .days .day .events {
+  position: relative;
+  float: left;
+  border-right: 1px solid #fff;
+  padding: 30px;
+  text-align: right;
+  width: 50%;
+}
+.timeline .days .day .events:after {
+  content: "";
+  width: 40%;
+  display: inline-block;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  right: 0;
+}
+.timeline .days .day .events .date {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  padding: 30px;
+  text-align: left;
+  color: #fff;
+  font-size: 24px;
+  white-space: nowrap;
+}
+.timeline .days .day .events .day__img {
+  margin-right: -30px;
+  position: relative;
+  overflow: hidden;
+}
+.timeline .days .day .events .day__img img {
+  display: block;
+  float: right;
+}
+.timeline .days .day .events .day__img .caption {
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+.timeline .days .day:nth-child(odd) .events {
+  width: calc(50% + 1px);
+  float: right;
+  border-right: 0;
+  border-left: 1px solid #fff;
+  text-align: left;
+}
+.timeline .days .day:nth-child(odd) .events:after {
+  right: auto;
+  left: 0;
+}
+.timeline .days .day:nth-child(odd) .events .date {
+  left: auto;
+  right: 100%;
+  text-align: right;
+}
+.timeline .days .day:nth-child(odd) .events .day__img {
+  margin-right: auto;
+  margin-left: -30px;
+}
+.timeline .days .day:nth-child(odd) .events .day__img img {
+  float: left;
+}
+.timeline .days .day:nth-child(odd) .events .day__img .caption {
+  right: auto;
+  left: 0;
+}
+
+/* ---------------- */
 
 .titles h2 {
   font-size: 35px;
