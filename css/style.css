@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: "Source Code Pro", serif;
   color: #fff;
   background-image: url("/images/sscp-bk.jpg");
@@ -14,6 +14,12 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 img {
@@ -60,6 +66,11 @@ a:hover {
 
 /* Main */
 
+section {
+  padding: 20px;
+  margin: auto;
+}
+
 .about {
   font-family: "Bebas Neue", serif;
   font-size: 45px;
@@ -82,7 +93,7 @@ a:hover {
   justify-content: center;
 }
 
-/* Main - História */
+/* História */
 
 .story h2 {
   font-size: 35px;
@@ -114,7 +125,7 @@ a:hover {
 }
 .timeline .days .day .events:after {
   content: "";
-  width: 40%;
+  width: auto;
   display: inline-block;
   height: 1px;
   background: #fff;
@@ -189,25 +200,39 @@ a:hover {
 
 /* Footer */
 
-footer {
-  text-align: center;
-  padding: 20px 0;
-}
-
 p {
   padding: 20px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  width: 100%;
+}
+
+.iconCentralizado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
   list-style: none;
   padding: 0;
 }
 
 .icons .icon {
-  position: relative;
+  position: relative; /* Necessário para posicionar a tooltip em relação ao ícone */
   border-radius: 50%;
   width: 3.125rem;
   height: 3.125rem;
@@ -224,15 +249,13 @@ p {
   color: #fff; /* Título do Ícone */
 }
 
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
 /* Tooltip */
+
 .icons .tooltip {
-  position: absolute;
-  top: -45px;
+  position: absolute; /* Posiciona a tooltip em relação ao ícone */
+  bottom: calc(100% + 10px); /* Ajusta a posição acima do ícone */
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 0.875rem;
   background: #fff;
   color: #000;
@@ -241,28 +264,23 @@ a {
   opacity: 0;
   pointer-events: none;
   transition: all 0.2s;
+  z-index: 2; /* Garante que a tooltip fique acima de outros elementos */
 }
 
 .icons .tooltip::before {
   content: "";
   position: absolute;
-  height: 8px;
-  width: 8px;
-  background: #fff;
-  bottom: -3px;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: #fff;
 }
 
 .icons .icon:hover .tooltip {
   opacity: 1;
-  top: -40px;
-}
-
-.iconCentralizado {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  bottom: calc(100% + 10px); /* Move a tooltip um pouco mais perto ao ser exibida */
 }
 
 /* Cor de fundo do ícone */
