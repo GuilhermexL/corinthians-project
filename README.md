@@ -8,7 +8,8 @@ Bem-vindo ao repositório oficial da página de fãs do Sport Club Corinthians P
 
 ## Imagem da Página
 
-![pag-corinthians](image.png)
+![print](https://github.com/user-attachments/assets/fd5e6e28-f94e-4afd-9ccb-8c268e37033c)
+
 
 ## Objetivo do Projeto
 O principal objetivo do projeto é integrar uma API de notícias e atualizações sobre o elenco do Corinthians, permitindo que os fãs fiquem informados sobre tudo o que acontece no clube em tempo real.
